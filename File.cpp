@@ -12,6 +12,7 @@ int File::read(QVector<File::info> &infos){
     info tinfo;
     QTextStream in(&file);
     while(!in.atEnd()){
+        file.seek(-1);
         in>>tinfo.id;
         in>>tinfo.name;
         in>>tinfo.date;
@@ -19,6 +20,8 @@ int File::read(QVector<File::info> &infos){
         in>>tinfo.status;
         infos.push_back(tinfo);
     }
+    if(infos.size()!=0)
+        infos.pop_back();
     return 0;
 }
 
@@ -50,7 +53,7 @@ int File::append(info &oneinfo){
     out<<oneinfo.name<<" ";
     out<<oneinfo.date<<" ";
     out<<oneinfo.value<<" ";
-    out<<oneinfo.status<<" ";
+    out<<oneinfo.status;
     out<<"\n";
     file.close();
     return 0;

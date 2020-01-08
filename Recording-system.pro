@@ -19,16 +19,16 @@ SOURCES += \
     File.cpp \
     add_scree.cpp \
     main.cpp \
-    main_scree.cpp
+    show_scree.cpp
 
 HEADERS += \
     File.h \
     add_scree.h \
-    main_scree.h
+    show_scree.h
 
 FORMS += \
     add_scree.ui \
-    main_scree.ui
+    show_scree.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

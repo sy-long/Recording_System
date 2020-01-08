@@ -9,7 +9,7 @@ public:
         QString name;
         QString date;
         double value;
-        int status;
+        QString status;
     };
 private:
     QString filename;

@@ -21,8 +21,8 @@ void Add_scree::on_pushButton_clicked()
     tinfo.name=ui->lineEdit_2->text();
     tinfo.date=ui->lineEdit_3->text();
     tinfo.value=ui->lineEdit_4->text().toDouble();
-    tinfo.status=ui->label_5->text().toInt();
-    if(tinfo.id.size()==0||tinfo.name.size()==0||tinfo.date.size()==0||tinfo.value==0||tinfo.status==0){
+    tinfo.status=ui->lineEdit_5->text();
+    if(tinfo.id.size()==0||tinfo.name.size()==0||tinfo.date.size()==0||tinfo.value==0||tinfo.status.size()==0){
         QMessageBox::information(this,"提示","请填写所有数据",QMessageBox::Ok);
         return;
     }
